@@ -1,0 +1,167 @@
+/* 🌟 Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f1eb; /* Beige doux */
+    color: #222;
+    margin: 0;
+    padding: 0;
+    background-image: url(big.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ✅ Navbar */
+.navbar {
+    border-bottom: 3px solid #444;
+    background: #222;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #f4f1eb !important;
+}
+
+/* ✅ Conteneur principal */
+.container {
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.85); /* Légère transparence */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Effet de flou subtil */
+}
+
+/* ✅ Titre principal */
+h2 {
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ Formulaires */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #444;
+    box-shadow: 0px 0px 8px rgba(68, 68, 68, 0.5);
+}
+
+/* ✅ Boutons */
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #444; /* Gris foncé */
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #666;
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* ✅ Tableau avec effet glassmorphism */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(249, 248, 246, 0.75); /* Beige clair avec transparence */
+    backdrop-filter: blur(8px); /* Effet de verre dépoli */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    color: #222; /* Amélioration de la lisibilité */
+}
+
+/* ✅ En-tête du tableau */
+.table thead {
+    background-color: rgba(34, 34, 34, 0.9); /* Noir semi-transparent */
+    color: white;
+}
+
+/* ✅ Cellules du tableau */
+.table td, .table th {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ✅ Effet au survol */
+.table-hover tbody tr:hover {
+    background: rgba(224, 221, 215, 0.6); /* Gris-beige doux avec transparence */
+    transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Séparation des lignes */
+.table tbody tr {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+/* ✅ Ajustement des boutons */
+.table .btn {
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.table .btn:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Barre de recherche */
+.d-flex {
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    transition: all 0.3s ease-in-out;
+}
+
+#searchInput:focus {
+    border-color: #444;
+    box-shadow: 0px 0px 8px rgba(68, 68, 68, 0.5);
+}
+
+/* ✅ Messages d'alerte */
+.alert {
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ✅ Animation de suppression */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
