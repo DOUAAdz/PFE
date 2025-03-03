@@ -1,0 +1,32 @@
+<?php
+include "connection.php";
+
+if (isset($_GET['query'])) {
+    $search = "%" . $_GET['query'] . "%";
+
+    $sql = "SELECT * FROM crud2 WHERE name LIKE ? OR email LIKE ? OR phone LIKE ? ORDER BY id DESC";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $search, $search, $search);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "
+            <tr id='row_{$row['id']}'>
+                <td>{$row['id']}</td>
+                <td>{$row['name']}</td>
+                <td>{$row['email']}</td>
+                <td>{$row['phone']}</td>
+                <td>{$row['join_date']}</td>
+                <td>
+                    <a class='btn btn-outline-success btn-sm' href='edit.php?id={$row['id']}'>✏️ Modifier</a>
+                    <button class='btn btn-outline-danger btn-sm delete-btn' data-id='{$row['id']}'>🗑️ Supprimer</button>
+                </td>
+            </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='6' class='text-center'>Aucun membre trouvé.</td></tr>";
+    }
+}
+?>
